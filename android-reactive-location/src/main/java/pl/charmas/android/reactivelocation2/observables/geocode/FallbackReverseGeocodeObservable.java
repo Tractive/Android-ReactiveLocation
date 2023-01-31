@@ -50,7 +50,7 @@ class FallbackReverseGeocodeObservable implements ObservableOnSubscribe<List<Add
 
     /**
      * This function fetches a list of addresses for the set latitude, longitude and maxResults properties from the
-     * Google Geocode API (http://maps.googleapis.com/maps/api/geocode).
+     * Google Geocode API (https://maps.googleapis.com/maps/api/geocode).
      *
      * @return List of addresses
      * @throws IOException   In case of network problems
@@ -58,7 +58,7 @@ class FallbackReverseGeocodeObservable implements ObservableOnSubscribe<List<Add
      */
     private List<Address> alternativeReverseGeocodeQuery() throws IOException, JSONException {
         URL url = new URL(String.format(Locale.ENGLISH,
-                "http://maps.googleapis.com/maps/api/geocode/json?"
+                "https://maps.googleapis.com/maps/api/geocode/json?"
                         + "latlng=%1$f,%2$f&sensor=true&language=%3$s",
                 latitude, longitude, locale.getLanguage()
         ));
